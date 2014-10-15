@@ -102,6 +102,7 @@ public class SchematicConduitBundle extends SchematicTile {
 		// cancel requirements reading
 	}
 
+	@Override
 	public double getEnergyRequirement(LinkedList<ItemStack> stacksUsed) {
 		double result = 0;
 
