@@ -5,6 +5,9 @@ import net.minecraft.item.ItemStack;
 
 import com.werlsoft.bsm.mods.enderio.blocks.SchematicConduitBundle;
 import com.werlsoft.bsm.mods.enderio.blocks.SchematicEIOEnergy;
+import com.werlsoft.bsm.mods.enderio.blocks.SchematicPoweredSpawner;
+import com.werlsoft.bsm.mods.enderio.blocks.SchematicVat;
+import com.werlsoft.bsm.mods.enderio.blocks.SchematicZombieGenerator;
 import com.werlsoft.bsm.mods.enderio.blocks.SchematicEIORotation;
 import com.werlsoft.bsm.mods.enderio.blocks.SchematicPaintedStairs;
 import com.werlsoft.bsm.mods.generic.SchematicCustomPower;
@@ -23,17 +26,17 @@ public class EnderIOHandler {
 		
 		SchematicRegistry.registerSchematicBlock(EnderIO.blockStirlingGenerator, SchematicEIOEnergy.class);
 		SchematicRegistry.registerSchematicBlock(EnderIO.blockCombustionGenerator, SchematicEIOEnergy.class);
-		SchematicRegistry.registerSchematicBlock(EnderIO.blockZombieGenerator, SchematicEIOEnergy.class);
+		SchematicRegistry.registerSchematicBlock(EnderIO.blockZombieGenerator, SchematicZombieGenerator.class);
 		//SchematicRegistry.registerSchematicBlock(EnderIO.blockReservoir, SchematicEIOEnergy.class);
 		SchematicRegistry.registerSchematicBlock(EnderIO.blockAlloySmelter, SchematicEIOEnergy.class);
 		SchematicRegistry.registerSchematicBlock(EnderIO.blockCrusher, SchematicEIOEnergy.class);
 		//SchematicRegistry.registerSchematicBlock(EnderIO.blockHyperCube, SchematicEIOEnergy.class);
 		SchematicRegistry.registerSchematicBlock(EnderIO.blockPowerMonitor, SchematicEIOEnergy.class);
-		//SchematicRegistry.registerSchematicBlock(EnderIO.blockVat, SchematicEIOEnergy.class);
+		SchematicRegistry.registerSchematicBlock(EnderIO.blockVat, SchematicVat.class);
 		//SchematicRegistry.registerSchematicBlock(EnderIO.blockFarmStation, SchematicEIOEnergy.class);
 		//SchematicRegistry.registerSchematicBlock(EnderIO.blockTank, SchematicEIOEnergy.class);
 		SchematicRegistry.registerSchematicBlock(EnderIO.blockCrafter, SchematicEIOEnergy.class);
-		//SchematicRegistry.registerSchematicBlock(EnderIO.blockPoweredSpawner, SchematicEIOEnergy.class);
+		SchematicRegistry.registerSchematicBlock(EnderIO.blockPoweredSpawner, SchematicPoweredSpawner.class);
 		SchematicRegistry.registerSchematicBlock(EnderIO.blockSliceAndSplice, SchematicEIOEnergy.class);
 		SchematicRegistry.registerSchematicBlock(EnderIO.blockSoulFuser, SchematicEIOEnergy.class);
 		SchematicRegistry.registerSchematicBlock(EnderIO.blockAttractor, SchematicEIOEnergy.class);
