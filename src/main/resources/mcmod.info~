@@ -1,8 +1,8 @@
 [
 {
-  "modid": "BSM",
-  "name": "Buildcarft Schematic Mod",
-  "description": "Adds builder support for mods",
+  "modid": "energymod",
+  "name": "Energy Mod",
+  "description": "A mod that takes your many cables and turns them into one.",
   "version": "${version}",
   "mcversion": "${mcversion}",
   "url": "",
