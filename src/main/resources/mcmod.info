@@ -1,0 +1,16 @@
+[
+{
+  "modid": "energymod",
+  "name": "Energy Mod",
+  "description": "A mod that takes your many cables and turns them into one.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Werl"],
+  "credits": "Many people to be named later",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
