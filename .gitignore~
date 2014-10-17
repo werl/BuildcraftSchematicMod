@@ -6,6 +6,7 @@ eclipse/
 other mods/
 out/
 .gradle/
+sources/
 
 *.class
 
