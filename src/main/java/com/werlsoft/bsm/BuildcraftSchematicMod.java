@@ -1,6 +1,8 @@
 package com.werlsoft.bsm;
 
 import com.werlsoft.bsm.mods.enderio.EnderIOHandler;
+import com.werlsoft.bsm.mods.fmp.ForgeMultipartHandler;
+import com.werlsoft.bsm.mods.ic2.IC2Handler;
 import com.werlsoft.bsm.mods.ironchests.IronChestsHandler;
 import com.werlsoft.bsm.refernce.ModNames;
 import com.werlsoft.bsm.refernce.Reference;
@@ -24,5 +26,9 @@ public class BuildcraftSchematicMod {
 			IronChestsHandler.init();
 		if(Loader.isModLoaded(ModNames.ENDER_IO))
 			EnderIOHandler.init();
+		if(Loader.isModLoaded(ModNames.IC2))
+			IC2Handler.init();
+		if(Loader.isModLoaded("ForgeMultipart"))
+			ForgeMultipartHandler.init();
 	}
 }

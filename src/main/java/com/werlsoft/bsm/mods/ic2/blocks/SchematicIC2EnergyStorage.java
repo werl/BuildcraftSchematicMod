@@ -6,7 +6,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import buildcraft.api.blueprints.IBuilderContext;
 
-public class SchematicIC2EnergyStoreage extends SchematicIC2Rotation {
+public class SchematicIC2EnergyStorage extends SchematicIC2Rotation {
 	
 	@Override
 	public void writeToWorld(IBuilderContext context, int x, int y, int z, LinkedList<ItemStack> stacks) {
