@@ -4,6 +4,7 @@ import com.werlsoft.bsm.mods.enderio.EnderIOHandler;
 import com.werlsoft.bsm.mods.fmp.ForgeMultipartHandler;
 import com.werlsoft.bsm.mods.ic2.IC2Handler;
 import com.werlsoft.bsm.mods.ironchests.IronChestsHandler;
+import com.werlsoft.bsm.mods.tconstruct.TConstructHandler;
 import com.werlsoft.bsm.refernce.ModNames;
 import com.werlsoft.bsm.refernce.Reference;
 import com.werlsoft.bsm.util.TestBlock;
@@ -28,7 +29,9 @@ public class BuildcraftSchematicMod {
 			EnderIOHandler.init();
 		if(Loader.isModLoaded(ModNames.IC2))
 			IC2Handler.init();
-		if(Loader.isModLoaded("ForgeMultipart"))
+		if(Loader.isModLoaded(ModNames.FORGEMULTIPART))
 			ForgeMultipartHandler.init();
+		if(Loader.isModLoaded(ModNames.TCONSTRUCT))
+			TConstructHandler.init();
 	}
 }

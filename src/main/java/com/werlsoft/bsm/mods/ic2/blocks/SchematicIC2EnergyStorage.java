@@ -19,5 +19,6 @@ public class SchematicIC2EnergyStorage extends SchematicIC2Rotation {
 		if(this.tileNBT.hasKey("progress"))
 			this.tileNBT.setShort("progress", (short) 0);
 		super.writeToWorld(context, x, y, z, stacks);
+		
 	}
 }
