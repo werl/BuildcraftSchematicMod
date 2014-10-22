@@ -18,23 +18,41 @@ public class TConstructHandler {
 	
 	public static void init(){
 		//Smeltery Controller, Drain, Seared Bricks
-		SchematicRegistry.registerSchematicBlock(TinkerSmeltery.smeltery, SchematicSmeltery.class);
-		SchematicRegistry.registerSchematicBlock(TinkerSmeltery.smelteryNether, SchematicSmeltery.class);
+		try {
+			SchematicRegistry.registerSchematicBlock(TinkerSmeltery.smeltery, SchematicSmeltery.class);
+		} catch (Exception e) {}
+		try {
+			SchematicRegistry.registerSchematicBlock(TinkerSmeltery.smelteryNether, SchematicSmeltery.class);
+		} catch (Exception e) {}
 		//Casting Table, Seared Faucet, Casting Basin
-		SchematicRegistry.registerSchematicBlock(TinkerSmeltery.searedBlock, SchematicSearedBlock.class);
-		SchematicRegistry.registerSchematicBlock(TinkerSmeltery.searedBlockNether, SchematicSearedBlock.class);
+		try {
+			SchematicRegistry.registerSchematicBlock(TinkerSmeltery.searedBlock, SchematicSearedBlock.class);
+		} catch (Exception e) {}
+		try {
+			SchematicRegistry.registerSchematicBlock(TinkerSmeltery.searedBlockNether, SchematicSearedBlock.class);
+		} catch (Exception e) {}
 		//Seared Tank, Glass, Window
-		SchematicRegistry.registerSchematicBlock(TinkerSmeltery.lavaTank, SchematicLavaTank.class);
-		SchematicRegistry.registerSchematicBlock(TinkerSmeltery.lavaTankNether, SchematicLavaTank.class);
+		try {
+			SchematicRegistry.registerSchematicBlock(TinkerSmeltery.lavaTank, SchematicLavaTank.class);
+		} catch (Exception e) {}
+		try {
+			SchematicRegistry.registerSchematicBlock(TinkerSmeltery.lavaTankNether, SchematicLavaTank.class);
+		} catch (Exception e) {}
 		//Fluid blocks
 		Block[] fluidBlocks = TinkerSmeltery.fluidBlocks;
-		for(int i = 0; i < fluidBlocks.length; i ++){
-			if(fluidBlocks[i].equals(TinkerWorld.slimePool))
-				SchematicRegistry.registerSchematicBlock(fluidBlocks[i], SchematicIgnore.class);
-			else
-				SchematicRegistry.registerSchematicBlock(fluidBlocks[i], SchematicFluid.class, new ItemStack(TinkerSmeltery.buckets, 1, i));
-			
-			
+		for(int i = 0; i < fluidBlocks.length; i ++) {
+			//TODO remove when fixed
+			if(fluidBlocks[i].equals(TinkerWorld.slimePool)) {
+				try {
+					SchematicRegistry.registerSchematicBlock(fluidBlocks[i], SchematicIgnore.class);
+				} catch (Exception e) {}
+			}
+			else{
+				try {
+					SchematicRegistry.registerSchematicBlock(fluidBlocks[i], SchematicFluid.class, new ItemStack(TinkerSmeltery.buckets, 1, i));
+				} catch (Exception e) {}
+			}
 		}
+		
 	}
 }

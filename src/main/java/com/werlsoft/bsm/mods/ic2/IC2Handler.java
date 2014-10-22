@@ -10,7 +10,7 @@ import buildcraft.api.blueprints.SchematicRegistry;
 public class IC2Handler {
 	
 	public static void init(){
-		RegistryHelper.registerSchematicItemStack(IC2Items.getItem("generator"), SchematicIC2EnergyStorage.class);	
+		//RegistryHelper.registerSchematicItemStack(IC2Items.getItem("generator"), SchematicIC2EnergyStorage.class);	
 	}
 
 }

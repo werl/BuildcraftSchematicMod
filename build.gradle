@@ -40,9 +40,9 @@ configFile.withReader {
     project.ext.config = new ConfigSlurper().parse prop
 }
 
-version = "1.7.10-0.1"
-group= "com.werlsoft.entropycraft" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = "EntropyCraft"
+version = "1.7.10-0.2"
+group= "com.werlsoft.bsm" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+archivesBaseName = "bsm"
 
 minecraft {
     version = "1.7.10-10.13.1.1229"
@@ -68,7 +68,7 @@ dependencies {
     compile "codechicken:CodeChickenLib:${config.mc_version}-${config.ccl_version}:dev"
     compile "codechicken:ForgeMultipart:${config.mc_version}-${config.fmp_version}:dev"
     compile "mcp.mobius.waila:Waila:1.5.6_dev1_1.7.10"
-    compile "com.mod-buildcraft:buildcraft:6.0.18:dev"
+    compile "com.mod-buildcraft:buildcraft:${config.bc_version}:dev"
 
 }
 

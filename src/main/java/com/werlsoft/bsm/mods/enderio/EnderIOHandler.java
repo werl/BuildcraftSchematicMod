@@ -28,46 +28,107 @@ public class EnderIOHandler {
 	public static void init(){
 		SchematicRegistry.declareBlueprintSupport(ModNames.ENDER_IO);
 		
-		SchematicRegistry.registerSchematicBlock(EnderIO.blockConduitBundle, SchematicConduitBundle.class);
+		try{
+			SchematicRegistry.registerSchematicBlock(EnderIO.blockConduitBundle, SchematicConduitBundle.class);
+		} catch(Exception e){}
+		try {
+			SchematicRegistry.registerSchematicBlock(EnderIO.blockStirlingGenerator, SchematicEIOEnergy.class);
+		} catch (Exception e) {}
+		try {
+			SchematicRegistry.registerSchematicBlock(EnderIO.blockCombustionGenerator, SchematicEIOEnergy.class);
+		} catch (Exception e) {}
+		try {
+			SchematicRegistry.registerSchematicBlock(EnderIO.blockZombieGenerator, SchematicZombieGenerator.class);
+		} catch (Exception e) {}
 		
-		SchematicRegistry.registerSchematicBlock(EnderIO.blockStirlingGenerator, SchematicEIOEnergy.class);
-		SchematicRegistry.registerSchematicBlock(EnderIO.blockCombustionGenerator, SchematicEIOEnergy.class);
-		SchematicRegistry.registerSchematicBlock(EnderIO.blockZombieGenerator, SchematicZombieGenerator.class);
+		try {
+			//TODO get this working
+			SchematicRegistry.registerSchematicBlock(EnderIO.blockReservoir, SchematicIgnore.class);
+		} catch (Exception e) {}
+		try {
+			SchematicRegistry.registerSchematicBlock(EnderIO.blockAlloySmelter, SchematicEIOEnergy.class);
+		} catch (Exception e) {}
+		try {
+			SchematicRegistry.registerSchematicBlock(EnderIO.blockCrusher, SchematicEIOEnergy.class);
+		} catch (Exception e) {}
 		
-		//TODO get this working
-		SchematicRegistry.registerSchematicBlock(EnderIO.blockReservoir, SchematicIgnore.class);
-		SchematicRegistry.registerSchematicBlock(EnderIO.blockAlloySmelter, SchematicEIOEnergy.class);
-		SchematicRegistry.registerSchematicBlock(EnderIO.blockCrusher, SchematicEIOEnergy.class);
+		try {
+			//TODO get this working
+			SchematicRegistry.registerSchematicBlock(EnderIO.blockHyperCube, SchematicIgnore.class);
+		} catch (Exception e) {}
+		try {
+			SchematicRegistry.registerSchematicBlock(EnderIO.blockPowerMonitor, SchematicEIOEnergy.class);
+		} catch (Exception e) {}
+		try {
+			SchematicRegistry.registerSchematicBlock(EnderIO.blockVat, SchematicVat.class);
+		} catch (Exception e) {}
+		try {
+			SchematicRegistry.registerSchematicBlock(EnderIO.blockFarmStation, SchematicEIOEnergy.class);
+		} catch (Exception e) {}
+		try {
+			SchematicRegistry.registerSchematicBlock(EnderIO.blockTank, SchematicEIOTank.class);
+		} catch (Exception e) {}
+		try {
+			SchematicRegistry.registerSchematicBlock(EnderIO.blockCrafter, SchematicEIOEnergy.class);
+		} catch (Exception e) {}
+		try {
+			SchematicRegistry.registerSchematicBlock(EnderIO.blockPoweredSpawner, SchematicPoweredSpawner.class);
+		} catch (Exception e) {}
+		try {
+			SchematicRegistry.registerSchematicBlock(EnderIO.blockSliceAndSplice, SchematicEIOEnergy.class);
+		} catch (Exception e) {}
+		try {
+			SchematicRegistry.registerSchematicBlock(EnderIO.blockSoulFuser, SchematicEIOEnergy.class);
+		} catch (Exception e) {}
+		try {
+			SchematicRegistry.registerSchematicBlock(EnderIO.blockAttractor, SchematicEIOEnergy.class);
+		} catch (Exception e) {}
+		try {
+			SchematicRegistry.registerSchematicBlock(EnderIO.blockSpawnGuard, SchematicEIOEnergy.class);
+		} catch (Exception e) {}
+		try {
+			SchematicRegistry.registerSchematicBlock(EnderIO.blockKillerJoe, SchematicKillerJoe.class);
+		} catch (Exception e) {}
+		try {
+			SchematicRegistry.registerSchematicBlock(EnderIO.blockEnchanter, SchematicEIORotation.class);
+		} catch (Exception e) {}
 		
-		//TODO get this working
-		SchematicRegistry.registerSchematicBlock(EnderIO.blockHyperCube, SchematicIgnore.class);
-		SchematicRegistry.registerSchematicBlock(EnderIO.blockPowerMonitor, SchematicEIOEnergy.class);
-		SchematicRegistry.registerSchematicBlock(EnderIO.blockVat, SchematicVat.class);
-		SchematicRegistry.registerSchematicBlock(EnderIO.blockFarmStation, SchematicEIOEnergy.class);
-		SchematicRegistry.registerSchematicBlock(EnderIO.blockTank, SchematicEIOTank.class);
-		SchematicRegistry.registerSchematicBlock(EnderIO.blockCrafter, SchematicEIOEnergy.class);
-		SchematicRegistry.registerSchematicBlock(EnderIO.blockPoweredSpawner, SchematicPoweredSpawner.class);
-		SchematicRegistry.registerSchematicBlock(EnderIO.blockSliceAndSplice, SchematicEIOEnergy.class);
-		SchematicRegistry.registerSchematicBlock(EnderIO.blockSoulFuser, SchematicEIOEnergy.class);
-		SchematicRegistry.registerSchematicBlock(EnderIO.blockAttractor, SchematicEIOEnergy.class);
-		SchematicRegistry.registerSchematicBlock(EnderIO.blockSpawnGuard, SchematicEIOEnergy.class);
-		SchematicRegistry.registerSchematicBlock(EnderIO.blockKillerJoe, SchematicKillerJoe.class);
-		SchematicRegistry.registerSchematicBlock(EnderIO.blockEnchanter, SchematicEIORotation.class);
+		try {
+			//TODO get this working
+			SchematicRegistry.registerSchematicBlock(EnderIO.blockElectricLight, SchematicIgnore.class);
+		} catch (Exception e) {}
 		
-		//TODO get this working
-		SchematicRegistry.registerSchematicBlock(EnderIO.blockElectricLight, SchematicIgnore.class);
+		try {
+			//TODO get this working
+			SchematicRegistry.registerSchematicBlock(EnderIO.blockLightNode, SchematicIgnore.class);
+		} catch (Exception e) {}
+		try {
+			SchematicRegistry.registerSchematicBlock(EnderIO.blockPainter, SchematicEIOEnergy.class);
+		} catch (Exception e) {}
 		
-		//TODO get this working
-		SchematicRegistry.registerSchematicBlock(EnderIO.blockLightNode, SchematicIgnore.class);
-		SchematicRegistry.registerSchematicBlock(EnderIO.blockPainter, SchematicEIOEnergy.class);
-		
-		SchematicRegistry.registerSchematicBlock(EnderIO.blockPaintedFence, SchematicTileCustomStack.class, new ItemStack(Blocks.fence), paintEnergy);
-		SchematicRegistry.registerSchematicBlock(EnderIO.blockPaintedFenceGate, SchematicCustomRotateMeta.class, new int[]{0, 1, 2, 3}, true, new ItemStack(Blocks.fence_gate), paintEnergy);
-		SchematicRegistry.registerSchematicBlock(EnderIO.blockPaintedWall, SchematicTileCustomStack.class, new ItemStack(Blocks.cobblestone_wall), paintEnergy);
-		SchematicRegistry.registerSchematicBlock(EnderIO.blockPaintedStair, SchematicPaintedStairs.class);
-		SchematicRegistry.registerSchematicBlock(EnderIO.blockPaintedSlab, SchematicTileCustomStack.class, new ItemStack(Blocks.stone_slab), paintEnergy);
-		SchematicRegistry.registerSchematicBlock(EnderIO.blockPaintedDoubleSlab, SchematicTileCustomStack.class, new ItemStack(Blocks.stone_slab), paintEnergy);
-		SchematicRegistry.registerSchematicBlock(EnderIO.blockPaintedGlowstone, SchematicTileCustomStack.class, new ItemStack(Blocks.glowstone), paintEnergy);
-		SchematicRegistry.registerSchematicBlock(EnderIO.blockPaintedCarpet, SchematicCustomPower.class, paintEnergy);
+		try {
+			SchematicRegistry.registerSchematicBlock(EnderIO.blockPaintedFence, SchematicTileCustomStack.class, new ItemStack(Blocks.fence), paintEnergy);
+		} catch (Exception e) {}
+		try {
+			SchematicRegistry.registerSchematicBlock(EnderIO.blockPaintedFenceGate, SchematicCustomRotateMeta.class, new int[]{0, 1, 2, 3}, true, new ItemStack(Blocks.fence_gate), paintEnergy);
+		} catch (Exception e) {}
+		try {
+			SchematicRegistry.registerSchematicBlock(EnderIO.blockPaintedWall, SchematicTileCustomStack.class, new ItemStack(Blocks.cobblestone_wall), paintEnergy);
+		} catch (Exception e) {}
+		try {
+			SchematicRegistry.registerSchematicBlock(EnderIO.blockPaintedStair, SchematicPaintedStairs.class);
+		} catch (Exception e) {}
+		try {
+			SchematicRegistry.registerSchematicBlock(EnderIO.blockPaintedSlab, SchematicTileCustomStack.class, new ItemStack(Blocks.stone_slab), paintEnergy);
+		} catch (Exception e) {}
+		try {
+			SchematicRegistry.registerSchematicBlock(EnderIO.blockPaintedDoubleSlab, SchematicTileCustomStack.class, new ItemStack(Blocks.stone_slab), paintEnergy);
+		} catch (Exception e) {}
+		try {
+			SchematicRegistry.registerSchematicBlock(EnderIO.blockPaintedGlowstone, SchematicTileCustomStack.class, new ItemStack(Blocks.glowstone), paintEnergy);
+		} catch (Exception e) {}
+		try {
+			SchematicRegistry.registerSchematicBlock(EnderIO.blockPaintedCarpet, SchematicCustomPower.class, paintEnergy);
+		} catch (Exception e) {}
 	}
 }

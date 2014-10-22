@@ -8,6 +8,9 @@ import buildcraft.api.blueprints.SchematicRegistry;
 public class IronChestsHandler {
 	public static void init(){
 		SchematicRegistry.declareBlueprintSupport("IronChest");
-		SchematicRegistry.registerSchematicBlock(IronChest.ironChestBlock, SchematicIronChest.class);
+		
+		try {
+			SchematicRegistry.registerSchematicBlock(IronChest.ironChestBlock, SchematicIronChest.class);
+		} catch (Exception e) {}
 	}
 }
