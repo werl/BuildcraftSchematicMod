@@ -40,7 +40,7 @@ configFile.withReader {
     project.ext.config = new ConfigSlurper().parse prop
 }
 
-version = "1.7.10-0.2.1"
+version = "1.7.10-0.2.2"
 group= "com.werlsoft.bsm" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "bsm"
 
