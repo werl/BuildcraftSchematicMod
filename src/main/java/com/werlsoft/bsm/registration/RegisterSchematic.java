@@ -19,8 +19,13 @@ public class RegisterSchematic {
 			f = blockClass.getField(fieldName);
 		} catch (NoSuchFieldException e1) {
 			e1.printStackTrace();
+			return false;
 		} catch (SecurityException e1) {
 			e1.printStackTrace();
+			return false;
+		} catch (NullPointerException e1){
+			e1.printStackTrace();
+			return false;
 		}
 		
 		Object obj = new Object();
