@@ -7,6 +7,7 @@ import net.minecraftforge.fluids.FluidContainerRegistry;
 import com.werlsoft.bsm.mods.tconstruct.blocks.SchematicLavaTank;
 import com.werlsoft.bsm.mods.tconstruct.blocks.SchematicSearedBlock;
 import com.werlsoft.bsm.mods.tconstruct.blocks.SchematicSmeltery;
+import com.werlsoft.bsm.registration.RegisterSchematic;
 
 import tconstruct.smeltery.TinkerSmeltery;
 import tconstruct.world.TinkerWorld;
@@ -18,27 +19,19 @@ public class TConstructHandler {
 	
 	public static void init(){
 		//Smeltery Controller, Drain, Seared Bricks
-		try {
-			SchematicRegistry.registerSchematicBlock(TinkerSmeltery.smeltery, SchematicSmeltery.class);
-		} catch (Exception e) {}
-		try {
-			SchematicRegistry.registerSchematicBlock(TinkerSmeltery.smelteryNether, SchematicSmeltery.class);
-		} catch (Exception e) {}
+		RegisterSchematic.registerSchematic(TinkerSmeltery.class, "smeltery", SchematicSmeltery.class);
+		RegisterSchematic.registerSchematic(TinkerSmeltery.class, "smelteryNether", SchematicSmeltery.class);
+		
 		//Casting Table, Seared Faucet, Casting Basin
-		try {
-			SchematicRegistry.registerSchematicBlock(TinkerSmeltery.searedBlock, SchematicSearedBlock.class);
-		} catch (Exception e) {}
-		try {
-			SchematicRegistry.registerSchematicBlock(TinkerSmeltery.searedBlockNether, SchematicSearedBlock.class);
-		} catch (Exception e) {}
+		RegisterSchematic.registerSchematic(TinkerSmeltery.class, "searedBlock", SchematicSearedBlock.class);
+		RegisterSchematic.registerSchematic(TinkerSmeltery.class, "searedBlockNether", SchematicSearedBlock.class);
+		
 		//Seared Tank, Glass, Window
-		try {
-			SchematicRegistry.registerSchematicBlock(TinkerSmeltery.lavaTank, SchematicLavaTank.class);
-		} catch (Exception e) {}
-		try {
-			SchematicRegistry.registerSchematicBlock(TinkerSmeltery.lavaTankNether, SchematicLavaTank.class);
-		} catch (Exception e) {}
+		RegisterSchematic.registerSchematic(TinkerSmeltery.class, "lavaTank", SchematicLavaTank.class);
+		RegisterSchematic.registerSchematic(TinkerSmeltery.class, "lavaTankNether", SchematicLavaTank.class);
+
 		//Fluid blocks
+		//TODO move to new registration system
 		Block[] fluidBlocks = TinkerSmeltery.fluidBlocks;
 		for(int i = 0; i < fluidBlocks.length; i ++) {
 			//TODO remove when fixed
