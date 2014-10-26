@@ -2,12 +2,14 @@ package com.werlsoft.bsm;
 
 import com.werlsoft.bsm.mods.enderio.EnderIOHandler;
 import com.werlsoft.bsm.mods.fmp.ForgeMultipartHandler;
+import com.werlsoft.bsm.mods.forestry.ForestryHandler;
 import com.werlsoft.bsm.mods.ic2.IC2Handler;
 import com.werlsoft.bsm.mods.ironchests.IronChestsHandler;
 import com.werlsoft.bsm.mods.tconstruct.TConstructHandler;
 import com.werlsoft.bsm.refernce.ModNames;
 import com.werlsoft.bsm.refernce.Reference;
 import com.werlsoft.bsm.util.TestBlock;
+import com.werlsoft.bsm.util.TestItem;
 
 import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.Mod;
@@ -19,8 +21,9 @@ public class BuildcraftSchematicMod {
 	
 	@Mod.EventHandler
 	public void init(FMLInitializationEvent event) {
-		if(Reference.MOD_VERSION.matches("@VERSION@"))
-			GameRegistry.registerBlock(new TestBlock(), "helperblock");
+		//if(Reference.MOD_VERSION.matches("@VERSION@"))
+		GameRegistry.registerBlock(new TestBlock(), "helperblock");
+		GameRegistry.registerItem(new TestItem(), "testItem");
 		
 		
 		if(Loader.isModLoaded(ModNames.IRON_CHEST))
@@ -33,5 +36,7 @@ public class BuildcraftSchematicMod {
 			ForgeMultipartHandler.init();
 		if(Loader.isModLoaded(ModNames.TCONSTRUCT))
 			TConstructHandler.init();
+		if(Loader.isModLoaded(ModNames.FORESTRY))
+			ForestryHandler.init();
 	}
 }
