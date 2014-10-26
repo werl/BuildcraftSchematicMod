@@ -12,6 +12,7 @@ import buildcraft.api.blueprints.SchematicRegistry;
 
 public class RegisterSchematic {
 	
+	@Deprecated
 	public static boolean registerSchematic(Class blockClass, String fieldName, Class<? extends Schematic> schematic, Object ... params){
 		Field f = null;
 		
@@ -46,6 +47,7 @@ public class RegisterSchematic {
 		else{
 			Block block = (Block)obj;
 			SchematicRegistry.registerSchematicBlock(block, schematic, params);
+			LogHelper.info("Registering: " + Block.blockRegistry.getNameForObject(block) + ". Using schematic: " + schematic.getName());
 			return true;
 		}
 	}

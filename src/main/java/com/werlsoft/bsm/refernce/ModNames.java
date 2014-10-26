@@ -6,5 +6,6 @@ public class ModNames {
 	public static final String IC2 = "IC2";
 	public static final String FORGEMULTIPART = "ForgeMultipart";
 	public static final String TCONSTRUCT = "TConstruct";
+	public static final String FORESTRY = "Forestry";
 
 }
