@@ -12,7 +12,6 @@ import com.werlsoft.bsm.registration.RegisterSchematic;
 import tconstruct.smeltery.TinkerSmeltery;
 import tconstruct.world.TinkerWorld;
 import buildcraft.api.blueprints.SchematicRegistry;
-import buildcraft.builders.schematics.SchematicFluid;
 import buildcraft.builders.schematics.SchematicIgnore;
 
 public class TConstructHandler {
@@ -42,7 +41,7 @@ public class TConstructHandler {
 			}
 			else{
 				try {
-					SchematicRegistry.registerSchematicBlock(fluidBlocks[i], SchematicFluid.class, new ItemStack(TinkerSmeltery.buckets, 1, i));
+					//SchematicRegistry.registerSchematicBlock(fluidBlocks[i], SchematicFluid.class, new ItemStack(TinkerSmeltery.buckets, 1, i));
 				} catch (Exception e) {}
 			}
 		}
