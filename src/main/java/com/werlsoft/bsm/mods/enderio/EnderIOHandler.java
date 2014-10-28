@@ -18,18 +18,17 @@ import com.werlsoft.bsm.mods.generic.SchematicTileCustomStack;
 import com.werlsoft.bsm.refernce.ModNames;
 import com.werlsoft.bsm.registration.RegisterSchematic;
 
-import crazypants.enderio.EnderIO;
-import buildcraft.api.blueprints.SchematicRegistry;
+//import crazypants.enderio.EnderIO;
+import buildcraft.api.blueprints.BuilderAPI;
+import buildcraft.api.blueprints.ISchematicRegistry;
 import buildcraft.builders.schematics.SchematicIgnore;
 import buildcraft.builders.schematics.SchematicRotateMeta;
 
 public class EnderIOHandler {
-	private static double paintEnergy = SchematicRegistry.BUILD_ENERGY / 2;
+	private static int paintEnergy = BuilderAPI.BUILD_ENERGY / 2;
 	
-	public static void init(){
-		SchematicRegistry.declareBlueprintSupport(ModNames.ENDER_IO);
-		
-		//Register Conduit Bundle
+	public static void init(){		
+		/* //Register Conduit Bundle
 		RegisterSchematic.registerSchematic(EnderIO.class, "blockConduitBundle", SchematicConduitBundle.class);
 		
 		//Register Stirling Generator
@@ -124,6 +123,6 @@ public class EnderIOHandler {
 		RegisterSchematic.registerSchematic(EnderIO.class, "blockPiantedGlowstone", SchematicTileCustomStack.class, new ItemStack(Blocks.glowstone), paintEnergy);
 		
 		//Rigister Painted Carpet
-		RegisterSchematic.registerSchematic(EnderIO.class, "blockPaintedCarpet", SchematicCustomPower.class, paintEnergy);
+		RegisterSchematic.registerSchematic(EnderIO.class, "blockPaintedCarpet", SchematicCustomPower.class, paintEnergy);*/
 	}
 }

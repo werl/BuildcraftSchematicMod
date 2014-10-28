@@ -2,16 +2,19 @@ package com.werlsoft.bsm.mods.tconstruct;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidContainerRegistry;
+import net.minecraftforge.fluids.FluidStack;
 
 import com.werlsoft.bsm.mods.tconstruct.blocks.SchematicLavaTank;
 import com.werlsoft.bsm.mods.tconstruct.blocks.SchematicSearedBlock;
 import com.werlsoft.bsm.mods.tconstruct.blocks.SchematicSmeltery;
 import com.werlsoft.bsm.registration.RegisterSchematic;
+import com.werlsoft.bsm.util.LogHelper;
 
 import tconstruct.smeltery.TinkerSmeltery;
 import tconstruct.world.TinkerWorld;
-import buildcraft.api.blueprints.SchematicRegistry;
+import buildcraft.api.blueprints.SchematicFluid;
 import buildcraft.builders.schematics.SchematicIgnore;
 
 public class TConstructHandler {
@@ -31,20 +34,20 @@ public class TConstructHandler {
 
 		//Fluid blocks
 		//TODO move to new registration system
-		Block[] fluidBlocks = TinkerSmeltery.fluidBlocks;
+		/*Block[] fluidBlocks = TinkerSmeltery.fluidBlocks;
+		Fluid[] fluid = TinkerSmeltery.fluids;
 		for(int i = 0; i < fluidBlocks.length; i ++) {
 			//TODO remove when fixed
 			if(fluidBlocks[i].equals(TinkerWorld.slimePool)) {
-				try {
-					SchematicRegistry.registerSchematicBlock(fluidBlocks[i], SchematicIgnore.class);
-				} catch (Exception e) {}
+				RegisterSchematic.registerSchematic(Block.blockRegistry.getNameForObject(fluidBlocks[i]), SchematicIgnore.class);
 			}
+			else if (fluidBlocks[i].equals(TinkerSmeltery.moltenInvar))
+				continue;
 			else{
-				try {
-					//SchematicRegistry.registerSchematicBlock(fluidBlocks[i], SchematicFluid.class, new ItemStack(TinkerSmeltery.buckets, 1, i));
-				} catch (Exception e) {}
+				LogHelper.info(Block.blockRegistry.getNameForObject(fluidBlocks[i]));
+				RegisterSchematic.registerSchematic(Block.blockRegistry.getNameForObject(fluidBlocks[i]), SchematicFluid.class, new FluidStack(fluid[i], 1000));
 			}
-		}
+		}*/
 		
 	}
 }

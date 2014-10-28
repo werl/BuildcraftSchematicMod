@@ -3,16 +3,17 @@ package com.werlsoft.bsm.mods.enderio.blocks;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
+
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraftforge.common.util.ForgeDirection;
-import crazypants.enderio.EnderIO;
-import crazypants.enderio.conduit.ConduitUtil;
-import crazypants.enderio.conduit.IConduit;
+//import crazypants.enderio.EnderIO;
+//import crazypants.enderio.conduit.ConduitUtil;
+//import crazypants.enderio.conduit.IConduit;
+import buildcraft.api.blueprints.BuilderAPI;
 import buildcraft.api.blueprints.IBuilderContext;
-import buildcraft.api.blueprints.SchematicRegistry;
 import buildcraft.api.blueprints.SchematicTile;
 
 public class SchematicConduitBundle extends SchematicTile {
@@ -54,9 +55,9 @@ public class SchematicConduitBundle extends SchematicTile {
 		}
 	}
 	
-	@Override
-	public void writeRequirementsToWorld(IBuilderContext context, LinkedList<ItemStack> req) {
-		List<IConduit> conduits = new ArrayList<IConduit>();
+	/*@Override
+	public void getRequirementsForPlacement(IBuilderContext context, LinkedList<ItemStack> req) {
+		/*List<IConduit> conduits = new ArrayList<IConduit>();
 		
 		short nbtVersion = this.tileNBT.getShort("nbtVersion");
 
@@ -85,20 +86,20 @@ public class SchematicConduitBundle extends SchematicTile {
 	}
 
 	@Override
-	public void writeRequirementsToBlueprint(IBuilderContext context, int x, int y, int z) {
+	public void storeRequirements(IBuilderContext context, int x, int y, int z) {
 		// cancel requirements reading
 	}
 
 	@Override
-	public double getEnergyRequirement(LinkedList<ItemStack> stacksUsed) {
-		double result = 0;
+	public int getEnergyRequirement(LinkedList<ItemStack> stacksUsed) {
+		int result = 0;
 
 		for (ItemStack s : stacksUsed) {
-			result += s.stackSize * SchematicRegistry.BUILD_ENERGY;
+			result += s.stackSize * BuilderAPI.BUILD_ENERGY;
 			if (s.getItem().equals(EnderIO.itemConduitFacade))
-				result += SchematicRegistry.BUILD_ENERGY / 2;
+				result += BuilderAPI.BUILD_ENERGY / 2;
 		}
 
 		return result;
-	}
+	}*/
 }

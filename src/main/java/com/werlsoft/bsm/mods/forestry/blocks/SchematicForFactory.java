@@ -9,7 +9,7 @@ import buildcraft.api.blueprints.IBuilderContext;
 public class SchematicForFactory extends SchematicForEnergy {
 	
 	@Override
-	public void writeToWorld(IBuilderContext context, int x, int y, int z, LinkedList<ItemStack> stacks) {
+	public void placeInWorld(IBuilderContext context, int x, int y, int z, LinkedList<ItemStack> stacks) {
 		if (this.tileNBT.hasKey("ProductionTime"))
 			this.tileNBT.setInteger("ProductionTime", 0);
 		if (this.tileNBT.hasKey("TimePerItem"))
@@ -43,6 +43,6 @@ public class SchematicForFactory extends SchematicForEnergy {
 		if (this.tileNBT.hasKey("Duration"))
 			this.tileNBT.setInteger("Duration", 0);
 		
-		super.writeToWorld(context, x, y, z, stacks);
+		super.placeInWorld(context, x, y, z, stacks);
 	}
 }

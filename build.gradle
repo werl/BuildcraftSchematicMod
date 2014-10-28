@@ -68,7 +68,7 @@ dependencies {
     compile "codechicken:CodeChickenLib:${config.mc_version}-${config.ccl_version}:dev"
     compile "codechicken:ForgeMultipart:${config.mc_version}-${config.fmp_version}:dev"
     compile "mcp.mobius.waila:Waila:1.5.6_dev1_1.7.10"
-    compile "com.mod-buildcraft:buildcraft:${config.bc_version}:dev"
+    // compile "com.mod-buildcraft:buildcraft:${config.bc_version}:dev"
 
 }
 

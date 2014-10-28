@@ -5,10 +5,10 @@ import java.lang.reflect.Field;
 import com.werlsoft.bsm.mods.enderio.blocks.SchematicConduitBundle;
 import com.werlsoft.bsm.util.LogHelper;
 
-import crazypants.enderio.EnderIO;
 import net.minecraft.block.Block;
+import buildcraft.api.blueprints.BuilderAPI;
+import buildcraft.api.blueprints.ISchematicRegistry;
 import buildcraft.api.blueprints.Schematic;
-import buildcraft.api.blueprints.SchematicRegistry;
 
 public class RegisterSchematic {
 	
@@ -46,7 +46,8 @@ public class RegisterSchematic {
 		}
 		else{
 			Block block = (Block)obj;
-			SchematicRegistry.registerSchematicBlock(block, schematic, params);
+			ISchematicRegistry schemes = BuilderAPI.schematicRegistry;
+			schemes.registerSchematicBlock(block, schematic, params);
 			LogHelper.info("Registering: " + Block.blockRegistry.getNameForObject(block) + ". Using schematic: " + schematic.getName());
 			return true;
 		}
@@ -57,13 +58,22 @@ public class RegisterSchematic {
 	}
 	
 	public static boolean registerSchematic(String blockID, Class<? extends Schematic> schematic, Object ... params ){
+		return registerSchematic(blockID, 0, schematic, params);
+	}
+	
+	public static boolean registerSchematic(String blockID, int meta, Class<? extends Schematic> schematic, Object ... params ){
 		if(!Block.blockRegistry.containsKey(blockID)){
 			LogHelper.error("The Block " + blockID + ", could not be found. THIS IS AN ERROR!!");
 			return false;
 		}
 		else{
-			SchematicRegistry.registerSchematicBlock((Block)Block.blockRegistry.getObject(blockID), schematic, params);
-			LogHelper.info("Registering: " + blockID + ". Using schematic: " + schematic.getName());
+			ISchematicRegistry schemes = BuilderAPI.schematicRegistry;
+			if(schemes.isSupported(Block.getBlockFromName(blockID), meta)){
+				LogHelper.warn("Block " + blockID + ":" + meta + " is already registered!");
+				return false;
+			}
+			schemes.registerSchematicBlock((Block)Block.blockRegistry.getObject(blockID), schematic, params);
+			LogHelper.info("Registering: " + blockID + ":" + meta + ". Using schematic: " + schematic.getName());
 			return true;
 		}
 	}

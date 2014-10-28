@@ -9,7 +9,7 @@ import buildcraft.api.blueprints.IBuilderContext;
 public class SchematicIC2EnergyStorage extends SchematicIC2Rotation {
 	
 	@Override
-	public void writeToWorld(IBuilderContext context, int x, int y, int z, LinkedList<ItemStack> stacks) {
+	public void placeInWorld(IBuilderContext context, int x, int y, int z, LinkedList<ItemStack> stacks) {
 		if(this.tileNBT.hasKey("energy"))
 			this.tileNBT.setDouble("energy", 0);
 		if(this.tileNBT.hasKey("storage"))
@@ -18,7 +18,7 @@ public class SchematicIC2EnergyStorage extends SchematicIC2Rotation {
 			this.tileNBT.setInteger("fuel", 0);
 		if(this.tileNBT.hasKey("progress"))
 			this.tileNBT.setShort("progress", (short) 0);
-		super.writeToWorld(context, x, y, z, stacks);
+		super.placeInWorld(context, x, y, z, stacks);
 		
 	}
 }

@@ -3,7 +3,7 @@ package com.werlsoft.bsm.mods.generic;
 import java.util.LinkedList;
 
 import net.minecraft.item.ItemStack;
-import buildcraft.api.blueprints.SchematicRegistry;
+import buildcraft.api.blueprints.BuilderAPI;
 import buildcraft.api.blueprints.SchematicTile;
 
 public class SchematicCustomPower extends SchematicTile {
@@ -14,11 +14,11 @@ public class SchematicCustomPower extends SchematicTile {
 	}
 	
 	@Override
-	public double getEnergyRequirement(LinkedList<ItemStack> stacksUsed) {
-		double result = 0;
+	public int getEnergyRequirement(LinkedList<ItemStack> stacksUsed) {
+		int result = 0;
 
 		for (ItemStack s : stacksUsed) {
-			result += s.stackSize * SchematicRegistry.BUILD_ENERGY;
+			result += s.stackSize * BuilderAPI.BUILD_ENERGY;
 		}
 		result += this.extraPower;
 

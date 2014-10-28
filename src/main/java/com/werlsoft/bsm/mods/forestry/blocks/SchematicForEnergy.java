@@ -10,7 +10,7 @@ import buildcraft.api.blueprints.IBuilderContext;
 public class SchematicForEnergy extends SchematicForRotation {
 	
 	@Override
-	public void writeToWorld(IBuilderContext context, int x, int y, int z, LinkedList<ItemStack> stacks) {
+	public void placeInWorld(IBuilderContext context, int x, int y, int z, LinkedList<ItemStack> stacks) {
 		if (this.tileNBT.hasKey("EnergyManager")){
 			NBTTagCompound energyManager = this.tileNBT.getCompoundTag("EnergyManager");
 			if (energyManager.hasKey("EnergyStorage")){
@@ -37,6 +37,6 @@ public class SchematicForEnergy extends SchematicForRotation {
 			this.tileNBT.setTag("IC2BasicSink", ic2);
 		}
 		
-		super.writeToWorld(context, x, y, z, stacks);
+		super.placeInWorld(context, x, y, z, stacks);
 	}
 }

@@ -9,7 +9,7 @@ import buildcraft.api.blueprints.IBuilderContext;
 public class SchematicForEngine extends SchematicForEnergy {
 	
 	@Override
-	public void writeToWorld(IBuilderContext context, int x, int y, int z, LinkedList<ItemStack> stacks) {
+	public void placeInWorld(IBuilderContext context, int x, int y, int z, LinkedList<ItemStack> stacks) {
 		if (this.tileNBT.hasKey("ForceCooldown"))
 			this.tileNBT.setBoolean("ForceCooldown", false);
 		
@@ -40,6 +40,6 @@ public class SchematicForEngine extends SchematicForEnergy {
 		if (this.tileNBT.hasKey("EngineTotalTime"))
 			this.tileNBT.setInteger("EngineTotalTime", 0);
 		
-		super.writeToWorld(context, x, y, z, stacks);
+		super.placeInWorld(context, x, y, z, stacks);
 	}
 }
