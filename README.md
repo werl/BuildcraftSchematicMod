@@ -1,10 +1,3 @@
 BuildcraftSchematicMod
 ======================
-Just a mod that adds compatibility to the Buildcraft builder for mods.
-
-Currently supported:
-	-IronChests
-	-EnderIO
-	-Forestry
-
-You will need to add these mods manually in order to develop!!
+No longer updating here. See http://apps.werlsoft.com:5703/projects/BCSM/repos/buildcraft-schematic-mod/browse
